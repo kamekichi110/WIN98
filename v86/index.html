@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emulator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="progress-container">
+    <div id="progress-bar"></div>
+  </div>
+  <hr>
+  <div class="setting">
+    <label for="mem">RAM size: </label><input type="number" name="memory" id="mem" placeholder="メモリサイズ">
+    <br>
+    <label for="vmem">vRAM size: </label><input type="number" name="vmemory" id="vmem" placeholder="ビデオメモリサイズ">
+  </div>
+<hr>
+<br>
+  <canvas id="screen" width="640" height="480"></canvas>
+
+  <div id="console"></div>
+
+  <div id="keyboard"></div>
+
+  <script src="v86_all.js"></script>
+  <script src="emu.js"></script>
+</body>
+</html>

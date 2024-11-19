@@ -1,0 +1,101 @@
+/* 通常のスタイリング */
+* {
+    -webkit-user-select: none; /* Safari, Chrome */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer, Edge */
+    user-select: none; /* Standard syntax */
+  }  
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  canvas {
+    display: block;
+    margin: 10px auto;
+    border: 1px solid black;
+  }
+  
+  #progress-container {
+    width: 80%;
+    margin: 10px auto;
+    background: #f0f0f0;
+    border: 1px solid #ccc;
+    height: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  #progress-bar {
+    width: 0;
+    height: 100%;
+    background: #76c7c0;
+    transition: width 0.2s;
+  }
+  
+  #console {
+    width: 80%;
+    margin: 10px auto;
+    background: #1e1e1e;
+    color: #c7c7c7;
+    padding: 10px;
+    height: 150px;
+    overflow-y: auto;
+    font-size: 12px;
+    border: 1px solid #333;
+    border-radius: 5px;
+  }
+  
+  #keyboard {
+    display: grid;
+    grid-template-columns: repeat(15, 1fr);
+    gap: 5px;
+    width: 80%;
+    margin: 10px auto;
+  }
+  
+  .key {
+    text-align: center;
+    padding: 5px;
+    background: #e0e0e0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    user-select: none;
+    cursor: pointer;
+  }
+  
+  .key:active {
+    background: #d0d0d0;
+  }
+  
+  .key.wide {
+    grid-column: span 2;
+  }
+  
+  .key.space {
+    grid-column: span 6;
+  }
+  
+  /* モバイル端末用スタイル */
+  @media (max-width: 640px) {
+    canvas {
+      width: 100%;
+      max-width: 480px;
+      margin: 20px auto;
+    }
+  
+    #keyboard {
+      grid-template-columns: repeat(8, 1fr);
+    }
+  
+    #progress-container {
+      width: 90%;
+    }
+  
+    #console {
+      width: 90%;
+      font-size: 10px;
+    }
+  }
+  
